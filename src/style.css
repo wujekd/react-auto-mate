@@ -26,26 +26,46 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1270px;
+    width: 100vw;
     height: 710px;
     padding: 20px;
     background-color: var(--bg-color);
     border-radius: 20px;
   }
 
-  .stats {
-    background-color: #54f;
-    display: flex;
-    flex-direction: column;
+  .sideContainer {
     width: 18%;
   }
-  .stat-item {
-    background-color: rgb(7, 21, 21);
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
   }
+  .menu button {
+    background: var(--section-bg);
+
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 26px;
+    border: 3px solid var(--border-color);
+}
+  .stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: var(--section-bg);
+    border: 4px solid var(--border-color);
+    font-size: 30px;
+  }
+
   
   .schedule {
     width: 80%; /* Adjust width to fill space */
-    height: 60%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,4 +78,68 @@
     font-weight: bold;
     text-align: center;
   }
-  
+
+
+.now, .next {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    justify-content: space-between;
+    background: #0c8953;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.next {
+    background: #28a745;
+    height: 10%;
+}
+
+.taskName {
+    flex: 2;
+    text-align: left;
+}
+
+.startTime, .finishTime {
+    flex: 1;
+    text-align: center;
+}
+
+.TaskFinishedButton {
+    flex: 1;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Scrollable future tasks */
+.future {
+    max-height: 200px;
+    width: 90%;
+    overflow-y: auto;
+    background: rgb(6, 83, 51);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+
+
